@@ -1,0 +1,130 @@
+body {
+    font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', serif; /* Palatino font with fallbacks */
+    background: url('../image/indoor_workspace_1.png') no-repeat center center fixed;
+    /* background: url('../image/image_1.png') no-repeat center center fixed; */
+    background-size: auto;
+    margin: 20px;
+    color: #333;
+}
+
+
+
+.container {
+    margin-top: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.90);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.folder {
+    margin-left: 20px;
+}
+
+label {
+    cursor: pointer;
+    display: block;
+    margin: 5px 0;
+}
+
+.controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.datetime {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #272423;
+}
+
+.text-black {
+    color: black;
+    line-height: 1.6; /* Spacing between lines */
+    font-size: 15px;  /* Increased font size */
+    font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', serif; /* Palatino font with fallbacks */
+}
+
+.extra-space {
+    display: block;
+    height: 5px; /* Add space before the next sentence */
+}
+
+.highlight-orange {
+    color: orange;
+    font-weight: bold;
+}
+
+pre {
+background-color: #f8f8f8; /* Light gray background for code block */
+border: 1px solid #ddd; /* Light border */
+border-radius: 5px; /* Rounded corners */
+padding: 10px; /* Padding around the text */
+overflow: auto; /* Enables scrolling if the text is too long */
+font-size: 18px; /* Adjust font size for code */
+line-height: 1.4; /* Better line height for readability */
+margin-top: 10px; /* Space above the code block */
+max-width: 500px;
+}        
+
+code {
+font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+color: #333; /* Dark gray text for code */
+}
+
+h1 {
+    position: fixed; /* Fix the title at the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left */
+    width: 100%; /* Make it span full width */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    color: #272423; /* Title color */
+    text-align: center; /* Center text */
+    padding: 10px 0; /* Add some padding */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+h2 {
+font-size: 18px;
+color: #ff6600; /* Same orange for subheadings */
+margin-bottom: 10px;
+}
+
+p {
+/* font-size: 18px; */
+margin-bottom: 20px;
+font-size: 15px;  /* Increased font size */
+font-family: 'Palatino', 'Palatino Linotype', 'Book Antiqua', serif; /* Palatino font with fallbacks */
+}
+
+section {
+margin-bottom: 40px;
+}
+
+.sub-title {
+font-size: 15px;
+color: #1b7692; /* Light green for sub-titles (1, 2, etc.) */
+margin-top: 10px;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto; /* Center the table */
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 15px; /* Set the font size for the table */
+}
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #d8f1fa; /* Light blue color */
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}

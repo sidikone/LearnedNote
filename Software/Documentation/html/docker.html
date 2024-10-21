@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Docker</title>
+        <link rel="stylesheet" href="../css/styles.css">
+        <!-- <h1>DataBase Fundamentals</h1> -->
+    </head>
+
+    <body>
+        <!-- <div>
+            <h1>DataBase Fundamentals</h1>
+        </div> -->
+
+        <!-- <h1>DataBase Fundamentals</h1> -->
+        <div class="container">
+            <form id="reference">
+                <div>
+
+                    <p class="text-black">
+                        Toute donnée est stockée dans une structure de base de données. On parle de BDD pour désigner le stockage des données et 
+                        de SGBD pour désigner les éléments (système) qui sont mis à la disposition du développeur pour manipuler ces données.
+                    </p>
+                        
+                    <p class="text-black">               
+                        Le langage SQL pour Structured Query Language (langage de requête structuré)
+                        se décompose en plusieurs sous-ensembles :
+                    </p>
+
+                    <ul class="text-black">
+                        <li><span class="highlight-orange">DDL</span> Data Definition Language, qui se composent principalement des ordres <strong>CREATE, ALTER, DROP</strong>. 
+                            Il regroupe les ordres utilisés pour créer, modifier et supprimer les structures (index, tables, vues, etc.) de la base de données.
+                        </li>
+                        <li><span class="highlight-orange">DML</span> Data Manipulation Language, qui se composent principalement des ordres <strong>SELECT, INSERT, DELETE, UPDATE</strong>. 
+                            Il regroupe les ordres utilisés pour manipuler les données dans la base.
+                        </li>
+                        <li><span class="highlight-orange">DCL</span> Data Control Language, qui se composent principalement des ordres <strong>GRANT</strong> et <strong>REVOKE</strong>. 
+                            Il regroupe les ordres utilisés pour gérer la sécurité des accès aux données.
+                        </li>
+                        <li><span class="highlight-orange">TCL</span>  Transaction Control Language, qui se composent principalement des ordres <strong>COMMIT</strong> et <strong>ROLLBACK</strong>. 
+                            Il regroupe les ordres utilisés pour gérer la validation ou non de la mise à jour de la base de données.
+                        </li>
+                    </ul>
+
+                    <p class="text-black">
+                        Il existe plusieurs normes SQL. La norme SQL2 ou SQL92 est la plus importante.
+                        C’est cette dernière qui est implémentée dans la majorité des SGBDR (système de gestion de base de données relationnelles).
+                        Ainsi, chaque fournisseur de SGBDR a implémenté sa façon le langage SQL et a ajouté ses propres extensions.
+                    </p>
+
+
+                    <section class="introduction">
+                        <h2 class="main-title">I. Instruction Dockerfile</h2>
+                        <p>Des blablas ici, expliquant la structure client-serveur ou d'autres informations pertinentes.</p>
+                        <div id="table1"></div> <!-- This will load table1.html -->
+                    
+                        <h3 class="sub-title">1. Essai</h3>
+                        <p>Essai de contenu ici.</p>
+                        <div id="table2"></div> <!-- This will load table2.html -->
+                    
+                        <h3 class="sub-title">2. Non</h3>
+                        <p>Autre contenu ici.</p>
+                    </section>
+                    
+                    <section class="description">
+                        <h2 class="main-title">II. Prise en main du client Docker</h2>
+                        <p>Text.</p>
+
+                        <img src="../image/docker/life_cycle_extensive.webp" alt="Life Cycle Description" style="display: block; margin-left: auto; margin-right: auto; width: 100%;">
+
+                        <p>Text.</p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Command</th>
+                                    <th>Description</th>
+                                    <th>Comment</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td> <code>sudo apt install docker</code> </td>
+                                    <td>10.44.100.111</td>
+                                    <td>Staging-node1</td>
+                                </tr>
+
+                                <tr>
+                                    <td> <code>sudo apt install docker</code> </td>
+                                    <td>10.44.100.115</td>
+                                    <td>cuda</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p>Text.</p>
+                    
+                        <h3 class="sub-title">1. Les commandes système</h3>
+                        <p>
+                            Il s'agit des commandes qui sont relaties au Docker Engine dans son ensemble, soit pour piloter le démon,
+                            soit pour obtenir des informations sur son fonctionnement.
+                        </p>
+                        <!-- <object type="text/html" data="./docker/table_01.html"></object>
+                        <object type="text/html" data="./docker/table_01.html"></object> -->
+                        <!-- <iframe src="./docker/table_01.html" style="width:100%; height:500px;" frameborder="0"></iframe> -->
+                        <iframe src="./docker/table_01.html" style="width:100%; height:70vh;" frameborder="0"></iframe>
+
+                        <h3 class="sub-title">2. Cycle de vie des conteneurs</h3>
+                        <p>Il s'agit d'un ensemble de commande pouvant influencer sur le cycle de vie d'un conteneur.</p>
+                        <iframe src="./docker/table_02.html" style="width:100%; height:70vh;" frameborder="0"></iframe>
+
+                        <h3 class="sub-title">3. Interactions avec un conteneur démarré</h3>
+                        <p>Commande servant à interagir avec un conteneur démarré</p>
+                        <iframe src="./docker/table_03.html" style="width:100%; height:70vh;" frameborder="0"></iframe>
+
+                        <h3 class="sub-title">4. Commandes relatives aux images</h3>
+                        <p>Commande qui permettent de manipuler des images Docker.</p>
+                        <iframe src="./docker/table_04.html" style="width:100%; height:70vh;" frameborder="0"></iframe>
+
+                        <h3 class="sub-title">5. Interactions avec le registry</h3>
+                        <p>Il s'agit de commande d'intéraction entre le Docker Engine de l'hôte et les registries (DockerHub ou autre registry public ou privé).</p>
+                        <iframe src="./docker/table_05.html" style="width:100%; height:70vh;" frameborder="0"></iframe>
+
+                    </section>
+
+                    <section class="dockerfile">
+                        <h2 class="main-title">III. Instruction Dockerfile</h2>
+                        <p>Text.</p>
+                    </section>
+
+                </div>
+            </form>
+        </div>
+
+
+    </body>
+
+</html>

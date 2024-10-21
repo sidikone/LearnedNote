@@ -1,0 +1,18 @@
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 0 auto; /* Center the table */
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 15px; /* Set the font size for the table */
+}
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+th {
+    background-color: #d8f1fa; /* Light blue color */
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}

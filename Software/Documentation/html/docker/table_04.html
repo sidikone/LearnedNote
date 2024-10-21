@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Docker</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- <h1>DataBase Fundamentals</h1> -->
+    </head>
+
+    <body>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><code>docker import [options] file |url| - rpository[:tag]</code></td>
+                    <td>Commande fonctionne avec 'export', permet d'importer le système de fichier d'un conteneur 
+                        (préalablement exporté) en tant qu'image.</td>
+                    <td><code>docker import webserver.tar</code></td>
+                </tr>
+
+                <tr>
+                    <td><code>docker load/save [options] image</code></td>
+                    <td>Permet d'importer des images depuis le cahe local Docker, et de les exporter vers le cahe local. 
+                        Aini, il est possible de transferer des images sans passer par le registry.</td>
+                    <td><code>docker save centos:7 > centos.tar</code>, <code>docker load -i=centos.tar</code></td>
+                </tr>
+
+                <tr>
+                    <td><code>docker images [options] [repository[:tag]]</code></td>
+                    <td>Permet de lister toutes les images présentes sur le cache local.</td>
+                    <td>le paramètre -a, permet de d'afficher les images (couches) intermédiaires.</td>
+                </tr>
+
+                <tr>
+                    <td><code>docker history [options] image</code></td>
+                    <td>Permet de visualiser les différentes couches d'une image et en regard, les instructions du Dockerfile 
+                        qui ont été utilisées pour les produire.</td>
+                    <td><code></code></td>
+                </tr>
+
+                <tr>
+                    <td><code>docker build [options] path|url</code></td>
+                    <td>Permet de contruire une image à partir d'un Dockerfile</td>
+                    <td>l'option -t permet de définir le tag d'une image et l'option -f permet de spécifier un Dockerfile 
+                        possédant un nom différent du standard actuel.</td>
+                </tr>
+
+                <tr>
+                    <td><code>docker commit [options] container [repository[:tag]]</code></td>
+                    <td>Permet de créer une image à partir d'un conteneur démarré.</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><code>docker rmi [options] [image..]</code></td>
+                    <td>Supprime une image du registre local</td>
+                    <td><code>docker export webserver > webserver_export.tar</code></td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </body>
+</html>

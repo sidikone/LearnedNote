@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Management & Administration</title>
+
+    <style>
+        body {
+            font-family: 'Georgia', sans-serif;
+            background: url('./image/indoor_workspace_1.png') no-repeat center center fixed;
+            background-size: auto;
+            margin: 20px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #272423;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .folder {
+            margin-left: 20px;
+        }
+
+        label {
+            cursor: pointer;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .datetime {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #272423;
+        }
+
+        #digitalClock {
+            font-size: 2em;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>DataBase Management & Administration</h1>
+
+    <div class="datetime">
+        <div id="digitalClock"></div>
+        <div id="date"></div>
+    </div>
+
+    <div class="container">
+        <form id="reference">
+            <div>
+                <ul>
+
+                    <li><a href="html/docker.html">Docker</a></li>
+                    <li><a href="html/git.html">Git</a></li>
+                    <li><a href="html/python.html">Python</a></li>
+
+                </ul>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Function to update the date and time
+        function updateDateTime() {
+            const now = new Date();
+            const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('date').textContent = now.toLocaleDateString(undefined, dateOptions);
+
+            const timeString = now.toLocaleTimeString();
+            document.getElementById('digitalClock').textContent = timeString;
+        }
+        // Initialize the date and time on page load and update every second
+        setInterval(updateDateTime, 1000);
+    </script>
+
+</body>
+</html>

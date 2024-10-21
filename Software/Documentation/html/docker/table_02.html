@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Docker</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- <h1>DataBase Fundamentals</h1> -->
+    </head>
+
+    <body>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                <tr>
+                    <td><code>docker create [options] image command [argument]</code></td>
+                    <td>Cette commande prend en paramètre le nom ou l'identifiant d'une image</td>
+                    <td><code>dockerd create -name=webserver nginx</code></td>
+                </tr>
+        
+                <tr>
+                    <td><code>docker start [options] container</code></td>
+                    <td>Démarre un conteneur qui aura été préalablement créé (à l'aide de la commande create) ou arrêté</td>
+                    <td><code>dockerd start webserver</code></td>
+                </tr>
+        
+                <tr>
+                    <td><code>docker run [options] image command [argument]</code></td>
+                    <td>'run' correspond à un 'create' suivi d'un 'start'</td>
+                    <td><code>dockerd run -name=webserver nginx</code></td>
+                </tr>
+        
+                <tr>
+                    <td><code>docker update [options] container</code></td>
+                    <td>Elle permet de modifier les ressources allouées (cpu, ..) à un conteneur déjà démarré. Attention il ne
+                        s'agit pas de modifier des paramètres de volumes ou de réseau.</td>
+                    <td><code>dockerd update webserver</code></td>
+                </tr>
+        
+                <tr>
+                    <td><code>docker stop [options] container</code></td>
+                    <td>Permet de stopper un conteneur en cours d'exécution,
+                        l'option -t permet de spécifier le nombre de secondes à attendre avant de tenter un 'kill'
+                    </td>
+                    <td><code>dockerd stop webserver</code></td>
+                </tr>
+        
+                <tr>
+                    <td><code>docker kill [options] container</code></td>
+                    <td>Permet de forcer l'arrêt d'un conteneur en cours d'exécution, 
+                       similaire à la command kill -9 des systèmes Unix
+                    </td>
+                    <td><code>dockerd kill webserver</code></td>
+                </tr>
+        
+                <tr>
+                    <td><code>docker restart [options] container</code></td>
+                    <td>Commande qui combine un stop et un start en séquence. à l'instart de la commande stop,
+                        elle accepte l'option -t.
+                    </td>
+                    <td><code>docker restart webserver</code></td>
+                </tr>
+        
+                <tr>
+                    <td><code>docker pause/unpose [options] container</code></td>
+                    <td>pause permet de freezer un conteneur (il est suspendu pas arrêté), 
+                        unpause permet de le réactiver.
+                    </td>
+                    <td><code>docker pause webserver</code></td>
+                </tr>
+        
+                <tr>
+                    <td><code>docker rm  [options] container</code></td>
+                    <td>Cette commande permet de détruire un conteneur (qui ipérativement devra être arrêté au préalable).
+                    </td>
+                    <td><code>docker rm webserver</code></td>
+                </tr>
+        
+                <tr>
+                    <td> <code>docker wait [options] container</code></td>
+                    <td>Cette commande permet de bloquer l'invite de commande tant que le coteneur n'est pas arrêté.
+                        Utile car la commande stop rend la main immédiatement, or certains conteneur peuvent prendre des minutes
+                        à s'arrêter.</td>
+                    <td><code>docker stop webserver</code> <code>docker wait webserver</code></td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+    </body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Docker</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- <h1>DataBase Fundamentals</h1> -->
+    </head>
+
+    <body>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td><code>docker logs [options] container</code></td>
+                    <td>Affiche les logs du conteneur. Par défaut, Docker va mettre à disposition de la commande logs
+                         ce qui est écrit dans le STADOUT pour le processus racine.</td>
+                    <td><code>dockerd log --tail X webserver</code> permet d'afficher X lignes de logs en partant de la fin</td>
+                </tr>
+
+                <tr>
+                    <td><code>docker exec [options] container command [arg]</code></td>
+                    <td>Permet d'exécuter des commandes à l'intérieur d'un conteneur démarré, typiquement un terminal bash
+                        dans un conteneur.</td>
+                    <td><code>dockerd exec -t -i webserver /bin/bash</code>, -t et -i permettent de lancer les commandes en mode interactif</td>
+                </tr>
+
+                <tr>
+                    <td><code>docker attach [options] container</code></td>
+                    <td>Permet de s'attacher à un containeur démarré pour vidualiser et eventuellement interragir avec le processus 
+                        racine du container.</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><code>docker rename old_name new_name</code></td>
+                    <td>Renomme un container.</td>
+                    <td><code>dockerd rename webserver nginxserver</code></td>
+                </tr>
+
+                <tr>
+                    <td><code>docker cp [options] container:src_path dest_path / docker cp [options] src_path container:dest_path </code></td>
+                    <td>Permet de copier des fichiers entr un conteneur démarré et le système de fichier de l'hôte.</td>
+                    <td><code>dockerd cp webserver:/usr/share/nginx/html/index.html .</code> or 
+                        <code>dockerd cp index.html webserver:/usr/share/nginx/html/index.html</code></td>
+                </tr>
+
+                <tr>
+                    <td><code>docker diff [options] container</code></td>
+                    <td>Permet de visualiser les changements effectués sur les fichiers d'un conteneur.</td>
+                    <td><code>dockerd diff webserver</code></td>
+                </tr>
+
+                <tr>
+                    <td><code>docker top [options] container</code></td>
+                    <td>Affiche la commande top affichée à l'intérieur d'un conteneur actif.
+                    </td>
+                    <td><code>docker top webserver</code></td>
+                </tr>
+
+                <tr>
+                    <td><code>docker port [options] container</code></td>
+                    <td>Permet de visualiser les ports exposés par un conteneur.</td>
+                    <td><code>docker port webserver</code></td>
+                </tr>
+
+                <tr>
+                    <td><code>docker export [options] container</code></td>
+                    <td>Cette commande permet d'exporter l'ensemble des fichiers d'un conteneur dans un fichier '.tar'. 
+                        Cette commande n'a de sens qu'avec 'docker import'.
+                    </td>
+                    <td><code>docker export webserver > webserver_export.tar</code></td>
+                </tr>
+
+            </tbody>
+        </table> 
+
+    </body>
+</html>
